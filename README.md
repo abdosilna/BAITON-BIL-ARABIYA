@@ -1,11 +1,28 @@
-<div align="center">
+# بايتون بالعربية — BAITON BIL ARABIYA
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+منصة عربية متكاملة لتعليم لغة **Python** من الصفر (Level 0) حتى بناء مشاريع حقيقية (Level 12)، مصممة بواجهة عربية كاملة (`RTL`) ومحرر كود احترافي وبيئة تشغيل Python داخل المتصفح.
 
-  <h1>Built with AI Studio</h2>
+## المزايا الرئيسية
+- **16 صفحة متكاملة**: من صفحة الهبوط ولوحة التعلم حتى إدارة المحتوى ولوحة الإدارة التجريبية.
+- **13 مسارًا تعليميًا (Level 0 - 12)**: شروحات عربية، أمثلة قابلة للتشغيل الفوري، شرح سطر بسطر، أخطاء شائعة، واختبارات.
+- **Python Playground حقيقي**: محرر CodeMirror 6 + تنفيذ Python عبر **Pyodide Web Worker** دون تجميد الواجهة.
+- **8 أنواع من التمارين التفاعلية**: اختيار من متعدد، صح/خطأ، ملء الفراغات، إكمال الكود، اكتشاف الأخطاء، ترتيب الكتل، كتابة كود Python، وتوقع المخرجات.
+- **6 مشاريع عملية**: تقييم حتمي باختبارات وحدة Python حقيقية.
+- **معلم ذكي بأربعة أوضاع**: يعمل حاليًا في وضع العرض المحلي (`MockAIProvider`) مع بنية Adapter جاهزة لربط Gemini و OpenAI لاحقًا.
+- **نظام تحفيز متوازن**: XP، مستويات، سلسلة أيام، تحديات يومية، وأوسمة محمية من التكرار.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## التشغيل المحلي
+```bash
+npm install
+npm run dev
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## البناء والاختبارات
+```bash
+npm run lint
+npm run build
+npm test
+```
 
-</div>
+## تنبيه وضع التجربة المحلي (Local Demo Mode)
+تعمل هذه النسخة محليًا بالكامل عبر `IndexedDB` و `LocalStorage` و `MockAIProvider` دون اتصال بـ Supabase أو مزودي الذكاء الاصطناعي الخارجيين.

@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-canvas: #101018;
+    --bg-surface: #181826;
+    --bg-secondary: #272338;
+    --border-hairline: rgba(255, 255, 255, 0.08);
+    --accent-primary: #8B5CF6;
+    --accent-success: #22C55E;
+    --accent-gold: #F59E0B;
+    --text-primary: #F4F4F8;
+    --text-muted: #A1A1B5;
+  }
+
+  html {
+    font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+  }
+
+  code, pre, .font-mono, .cm-editor {
+    font-family: 'IBM Plex Mono', 'IBM Plex Sans Arabic', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  }
+
+  /* Ensure Python code and terminal blocks remain strictly LTR inside RTL Arabic UI */
+  .code-ltr {
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: isolate;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101018;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272338;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B5CF6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
